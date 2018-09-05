@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', serif;
+}
+#app{
+    width: 100%;   
+}
+.contact-grid{
+    display: grid;   
+    grid-template-columns: repeat(6, 1fr);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+.card .avatar{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+.card .avatar.active{
+    border: 5px solid #2BF287;
+}
+.line-status{
+    font-size: .8rem;
+    font-style: italic;
+    margin-top: 5px;
+}
+.card .name{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 10px;
+}
+.info .title{
+    font-weight: 600;
+
+}
+
+@media screen and (max-width: 1500px){
+    .contact-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 750px){
+    .contact-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 450px){
+    .contact-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
